@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 })
 
 
-//  CRUD = Create , Read , Update , Delete
+// CRUD = Create , Read , Update , Delete
 
 // Read
 app.get('/tasks', (req, res) => {

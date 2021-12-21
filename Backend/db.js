@@ -5,7 +5,6 @@ const dbURL = "mongodb://localhost:27017/TodoListV01";
 
 mongoose.connect(dbURL);
 
-
 const db = mongoose.connection;
 db.on("error" , (err) => {
     console.log("ERROR in MongoDB")
