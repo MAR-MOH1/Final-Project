@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   res.json('GET / is Working ...')
 })
 
+
+//  CRUD = Create , Read , Update , Delete
+
+// Read
 app.get('/tasks', (req, res) => {
   Todo.find({}, (err , data) => {
     if (err) {
@@ -19,6 +23,7 @@ app.get('/tasks', (req, res) => {
   });
 });
 
+// Create
 app.post("/tasks", (req , res) => {
 
   Todo.create(req.body , (err , newTask) => {
@@ -30,6 +35,7 @@ app.post("/tasks", (req , res) => {
   });
 })
 
+// Delete
 app.delete("/tasks/:id" , (req , res) => {
   console.log(req.params.id);
 
@@ -45,7 +51,7 @@ app.delete("/tasks/:id" , (req , res) => {
   });
 });
 
-
+//  Update
 app.put("/tasks/:id" , (req , res) => {
 
   Todo.updateOne(
