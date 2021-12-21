@@ -8,9 +8,9 @@ mongoose.connect(dbURL);
 
 const db = mongoose.connection;
 db.on("error" , (err) => {
-    console.log("ERROR IN MongoDB")
+    console.log("ERROR in MongoDB")
 });
 
 db.on("connected" , (err) => {
-    console.log("MongoDB IS CONNECTED ..");
+    console.log("MongoDB is Connected ...");
 });
